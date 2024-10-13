@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: webservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/ProductBase?createDatabaseIfNotExist=true
+    username: root
+    password: helloyassine
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+  mvc:
+    format:
+      date: yyyy-MM-dd
+
