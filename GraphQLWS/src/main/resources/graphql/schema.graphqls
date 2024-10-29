@@ -1,0 +1,26 @@
+type Query{
+    customersList: [Customer],
+    customerById (id:ID) : Customer
+}
+type Mutation{
+    createCustomer (customer :CustomerDTO) :Customer,
+    updateCustomer (id: ID ,customer :CustomerDTO) :Customer,
+    deleteCustomer(id:ID) : Boolean
+}
+
+type Customer {
+    id: ID
+    firstName: String
+    lastName: String
+    email: String
+    phoneNumber: String
+    address: String
+}
+
+input CustomerDTO{
+    firstName: String
+    lastName: String
+    email: String
+    phoneNumber: String
+    address: String
+}

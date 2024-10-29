@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: GraphQLWS
+  datasource:
+    url: jdbc:mysql://localhost:3306/CustomerBase?createDatabaseIfNotExist=true
+    username: root
+    password: helloyassine
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+  mvc:
+    format:
+      date: yyyy-MM-dd
+
+  graphql:
+    graphiql:
+      enabled: true
+
+server:
+  port: 8060
